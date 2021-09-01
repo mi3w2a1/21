@@ -1,0 +1,19 @@
+import urllib.request as req
+
+url = 'https://script.google.com/macros/s/AKfycbwt6VY5zjFc3h0jga5qLyxzRdCwrmhhZva_1z9251ga3wUgj_f1eTTwlwigW6OJtyJXsQ/exec'
+
+
+import requests
+
+def main():
+	data = {
+		'functionName': 'SetCellValuesStringedArray',
+		'stringedArray': 'AAA\nBBB\n\nCCC\nDDD'
+	}
+	response = requests.post(url, data)
+	print(response.status_code)    # HTTPのステータスコード取得
+	print(response.text)	# レスポンスのHTMLを文字列で取得
+
+if __name__ == "__main__":
+	main()
+
