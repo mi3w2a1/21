@@ -8,7 +8,7 @@ name: test_chatbot
 # 実はgithub actionsのcronの時刻はUTCなので、日本時間に合わせるために日本時刻から9時間マイナスで設定する必要があります。
 on:
   schedule:
-    - cron: '0 22 * * *'
+    - cron: '* 23 * * *'
 
 jobs:
   build:
