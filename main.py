@@ -1,14 +1,14 @@
-import urllib.request as req
+#!/usr/bin/env python
+# coding: utf-8
 
 url = 'https://script.google.com/macros/s/AKfycbwt6VY5zjFc3h0jga5qLyxzRdCwrmhhZva_1z9251ga3wUgj_f1eTTwlwigW6OJtyJXsQ/exec'
-
 
 import requests
 
 def main():
 	data = {
 		'functionName': 'SetCellValuesStringedArray',
-		'stringedArray': 'AAA\nBBB\n\nCCC\nDDD'
+		'stringedArray': 'AAA\nBBB\n\nCCC\nDDD\n\nXXX\nYYY\n\nAAA\nBBB\n\nCCC\nDDD\n\nXXX\nYYY'
 	}
 	response = requests.post(url, data)
 	print(response.status_code)    # HTTPのステータスコード取得
