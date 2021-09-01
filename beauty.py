@@ -164,13 +164,16 @@ input::-webkit-inner-spin-button,input::-webkit-outer-spin-button,input::-webkit
 
 """
 
-parser_html = BeautifulSoup(html, "html.parser")
+def main():
+	parser_html = BeautifulSoup(html, "html.parser")
 
-prettify_html = parser_html.prettify()
+	prettify_html = parser_html.prettify()
 
 
-f = open('myfile.txt', 'w', encoding='UTF-8')
-f.write(prettify_html)
-f.close()
+	f = open('myfile.txt', 'w', encoding='UTF-8')
+	f.write(prettify_html)
+	f.close()
 
-print(prettify_html)
+	print(prettify_html)
+
+main()
