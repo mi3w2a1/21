@@ -10,7 +10,7 @@ import requests
 def main():
 	data = {
 		'functionName': 'SetCellValuesStringedArray',
-		'stringedArray': 'AAA\nBBB\n\nCCC\nDDD\n\nXXX\nYYY\n\nAAA\nBBB\n\nCCC\nDDD\n\nXXX\nYYY'
+		'stringedArray': 'tesutoAAA\ntesutoBBB\n\ntesutoCCC\ntesutoDDD\n\ntesutoXXX\ntesutoYYY\n\ntesutoAAA\ntesutoBBB\n\ntesutoCCC\nDDD\n\nXXX\nYYY'
 	}
 	response = requests.post(url, data)
 	print(response.status_code)    # HTTPのステータスコード取得
