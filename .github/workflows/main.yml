@@ -6,10 +6,11 @@ name: test1
 # UTC の 02:00 は JST だと 11:00 。
 # 曜日指定には [0, 6] の整数を使います。 0 が日曜日、 6 が土曜日です。
 # 実はgithub actionsのcronの時刻はUTCなので、日本時間に合わせるために日本時刻から9時間マイナスで設定する必要があります。
+# 22は日本時間で7時。3は正午
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 22 * * *'
+    - cron: '0 3 * * *'
 
 
 jobs:
